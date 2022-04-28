@@ -11,7 +11,7 @@
 
 # sveltekit-fido-u2f-login
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/rodneylab/sveltekit-fido-u2f-login)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/rodneylab/sveltekit-fido-u2f-login)
 
 Example code for handling FIDO U2F Login in SvelteKit. The code accompanies the <a aria-label="Open Rodney Lab blog post on using Session cookies with Svelte Kit" href="https://rodneylab.com/sveltekit-fido-u2f-login/">post on SvelteKit FIDO U2F login</a>. If you have any questions, please drop a comment at the bottom of that page.
 
