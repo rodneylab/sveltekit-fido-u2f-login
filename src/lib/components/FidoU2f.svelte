@@ -53,11 +53,9 @@
 
   async function handleAuthenticate() {
     try {
-
       /* add code here to request an authentication challenge from your server */
 
       authenticate(signRequests[0]);
-
     } catch (error) {
       console.error(`Error in handleAuthenticate: ${error}`);
     }
@@ -65,7 +63,6 @@
 
   async function completeRegistration() {
     try {
-
       /* add code here to send the registration data to your server */
 
       if (registrationSuccessful) {
@@ -84,7 +81,6 @@
         /* add code here to request fidoU2fBeginRegister from your server */
 
         registerData = await register([fidoU2fBeginRegister]);
-
       } catch (error) {
         let message;
         if (error?.metaData?.type) {
