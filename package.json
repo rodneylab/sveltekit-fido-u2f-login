@@ -4,26 +4,28 @@
   "license": "BSD-3-Clause",
   "description": "SvelteKit Shiki syntax highlighting: use any VSCode colour theme to accessibly syntax highlight code on your SvelteKit app with line numbers.",
   "scripts": {
-    "dev": "svelte-kit dev --port 3030",
-    "build": "svelte-kit build",
-    "preview": "svelte-kit preview",
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. .",
     "check": "svelte-check --tsconfig ./jsconfig.json",
     "prettier:check": "prettier --check --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.3",
     "@sveltejs/kit": "next",
-    "eslint": "^8.17.0",
+    "commitlint": "^17.0.3",
+    "eslint": "^8.21.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "husky": "^8.0.1",
-    "prettier": "^2.7.0",
+    "prettier": "^2.7.1",
     "prettier-plugin-svelte": "^2.7.0",
-    "svelte": "^3.48.0",
-    "svelte-check": "^2.7.2",
-    "u2f-api": "^1.2.1"
+    "svelte": "^3.49.0",
+    "svelte-check": "^2.8.0",
+    "u2f-api": "^1.2.1",
+    "vite": "^3.0.5"
   },
   "type": "module",
   "repository": {
@@ -32,5 +34,8 @@
   },
   "bugs": {
     "url": "https://github.com/rodneylab/sveltekit-fido-u2f-login/issues"
+  },
+  "peerDependencies": {
+    "vite": "^3.0.5"
   }
 }
