@@ -1,5 +1,5 @@
 <script>
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { PLACEHOLDER_TEXT, TITLE } from '$lib/constants/form';
 	import user from '$lib/shared/stores/user';
