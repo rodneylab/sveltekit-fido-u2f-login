@@ -5,6 +5,7 @@
 	"description": "SvelteKit Shiki syntax highlighting: use any VSCode colour theme to accessibly syntax highlight code on your SvelteKit app with line numbers.",
 	"scripts": {
 		"dev": "vite dev",
+		"start": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
@@ -13,19 +14,19 @@
 		"prettier:check": "prettier --check --plugin-search-dir=. ."
 	},
 	"devDependencies": {
-		"@commitlint/config-conventional": "^17.4.4",
-		"@sveltejs/kit": "^1.9.1",
-		"commitlint": "^17.4.4",
-		"eslint": "^8.35.0",
-		"eslint-config-prettier": "^8.6.0",
+		"@commitlint/config-conventional": "^17.6.6",
+		"@sveltejs/kit": "^1.22.1",
+		"commitlint": "^17.6.6",
+		"eslint": "^8.44.0",
+		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"husky": "^8.0.3",
-		"prettier": "^2.8.4",
-		"prettier-plugin-svelte": "^2.9.0",
-		"svelte": "^3.55.1",
-		"svelte-check": "^3.0.4",
+		"prettier": "^2.8.8",
+		"prettier-plugin-svelte": "^2.10.1",
+		"svelte": "^4.0.5",
+		"svelte-check": "^3.4.5",
 		"u2f-api": "^1.2.1",
-		"vite": "^4.1.4"
+		"vite": "^4.4.2"
 	},
 	"type": "module",
 	"repository": {
