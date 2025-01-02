@@ -6,24 +6,23 @@
 	import { isSupported, register, sign } from 'u2f-api';
 	import TextInputField from '../TextInputField.svelte';
 
-	export let fidoU2fRegistered = false;
-	let label = '';
-	$: registering = false;
+	let { fidoU2fRegistered = false } = $props();
 
-	const registerLoginButtonText = fidoU2fRegistered
-		? 'Log in with FIDO U2F'
-		: 'Register with FIDO U2F';
+	let label = $state('');
+	let registering = $state(false);
 
-	$: submitting = false;
-	let registerData;
-	$: registerData = null;
+	let registerLoginButtonText = $derived(
+		fidoU2fRegistered ? 'Log in with FIDO U2F' : 'Register with FIDO U2F',
+	);
 
-	$: checkFidoU2FSupport;
+	let submitting = $state(false);
+	let registerData = $state(null);
+
 	async function checkFidoU2FSupport() {
 		return browser && (await isSupported());
 	}
 
-	$: fidoU2fSupported = checkFidoU2FSupport();
+	let fidoU2fSupported = $derived(checkFidoU2FSupport());
 
 	async function handleAuthenticateRegister() {
 		if (fidoU2fRegistered) {
@@ -61,7 +60,8 @@
 		}
 	}
 
-	async function completeRegistration() {
+	async function completeRegistration(event) {
+		event.preventDefault();
 		try {
 			/* add code here to send the registration data to your server */
 
@@ -96,7 +96,7 @@
 
 {#if fidoU2fSupported}
 	{#if registering}
-		<form on:submit|preventDefault={completeRegistration}>
+		<form onsubmit={completeRegistration}>
 			<TextInputField
 				value={label}
 				required
@@ -112,7 +112,7 @@
 			>
 		</form>
 	{/if}
-	<button on:click={handleAuthenticateRegister} disabled={submitting}
+	<button onclick={handleAuthenticateRegister} disabled={submitting}
 		>{registerLoginButtonText}</button
 	>
 {:else}
